@@ -92,7 +92,8 @@ void RCC_GPIOA_enable()
 }
 
 void RCC_GPIOB_enable()
-{
+{     
+	
 	// RCC Peripheral Clock Enable Register 
 	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
 }

@@ -54,7 +54,7 @@ int main(void) {
     int buttonState = 0;
     int ledIndex = 0;
 
-    // Initial state: LED0 ON
+    // Initial state LED0 ON
     GPIO_write(LED0_PIN, HIGH);
     GPIO_write(LED1_PIN, LOW);
     GPIO_write(LED2_PIN, LOW);
@@ -66,13 +66,13 @@ int main(void) {
         // Read button state
         buttonState = GPIO_read(BUTTON_PIN);
 
-        // Pull-up button: pressed = LOW(0)
+        // Pull-up button
         if (buttonState == LOW) {
 
-            // Move to next LED
+            // Move to next
             ledIndex++;
 
-            // LED3 다음에는 다시 LED0
+            // LED3 -> LED0
             if (ledIndex > 3)
                 ledIndex = 0;
 
@@ -95,7 +95,9 @@ int main(void) {
             else if (ledIndex == 3)
                 GPIO_write(LED3_PIN, HIGH);
 
-            while (GPIO_read(BUTTON_PIN) == LOW);
+            
+                while (GPIO_read(BUTTON_PIN) == LOW);
+                // Wait for button to move only one step 
         }
     }
 }
