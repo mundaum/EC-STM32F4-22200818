@@ -13,9 +13,6 @@ Description      : GPIO Library. Distributed to Students for LAB_GPIO
 //#include "ecGPIO2.h"
 
 
-/*---------------------------------------------------------------- 
-				[EXERCISE]
----------------------------------------------------------------- */
 void GPIO_init(PinName_t pinName, uint32_t mode){     
 	GPIO_TypeDef * Port;
 	unsigned int pin;
@@ -32,10 +29,7 @@ void GPIO_init(PinName_t pinName, uint32_t mode){
 		RCC_GPIOD_enable();
 	if (Port == GPIOH)
 		RCC_GPIOH_enable();
-	// Make it for GPIOC, GPIOD..GPIOH
-	// [TO-DO] YOUR CODE GOES HERE !!!
-	//
-	// You can also make and use a more general function of
+
 	// void RCC_GPIO_enable(GPIO_TypeDef *Port); 
 
 	
@@ -106,9 +100,6 @@ uint32_t GPIO_read(PinName_t pinName){
 }
 
 
-/*---------------------------------------------------------------- 
-				[Optional EXERCISE]
----------------------------------------------------------------- */
 // void pinMode(PinName_t pin, uint32_t mode){}
 // void digitalWrite(PinName_t pin, uint32_t value){}
 // uint32_t  digitalRead(PinName_t pin){}
