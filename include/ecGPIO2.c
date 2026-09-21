@@ -32,10 +32,7 @@ void GPIO_init(PinName_t pinName, uint32_t mode){
 		RCC_GPIOD_enable();
 	if (Port == GPIOH)
 		RCC_GPIOH_enable();
-	// Make it for GPIOC, GPIOD..GPIOH
-	// [TO-DO] YOUR CODE GOES HERE !!!
-	//
-	// You can also make and use a more general function of
+
 	// void RCC_GPIO_enable(GPIO_TypeDef *Port); 
 
 	
