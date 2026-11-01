@@ -30,14 +30,6 @@ This repository contains:
 - **Framework:** CMSIS
 - **MCU:** STM32F411RE
 
-## Installation
 
-1. Open the project in Visual Studio Code.
-2. Select the PlatformIO environment.
-3. Build and upload the code to the Nucleo-F411RE board.
 
-## Resources
-
-- [Embedded Controller Course](https://ykkim.gitbook.io/ec/)
-- [EC-student GitHub](https://github.com/ykkimhgu/EC-student)
 
