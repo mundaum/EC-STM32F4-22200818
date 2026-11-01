@@ -2,7 +2,7 @@
 @ Embedded Controller by Young-Keun Kim - Handong Global University
 Author           : Daum Moon
 Created          : 05-03-2021
-Modified         : 14-09-2026
+Modified         : 23-09-2026
 Language/ver     : C++ in VS Code
 
 Description      : GPIO Library. Distributed to Students for LAB_GPIO
@@ -26,14 +26,13 @@ Description      : GPIO Library. Distributed to Students for LAB_GPIO
 #define LED_PIN 	PA_5
 #define BUTTON_PIN  PC_13
 
-/*---------------------------------------------------------------- 
-                    [EXERCISE]
----------------------------------------------------------------- */
+
 // GPIO Pull-Up / Pull-Down
 #define NO_PUPD     0x00
 #define PULL_UP     0x01
 #define PULL_DOWN   0x02
 #define RESERVED    0x03
+
 
 // GPIO Output Type
 #define PUSH_PULL   0x00
@@ -70,6 +69,9 @@ void FND_init(PinName_t *pinFND);
 void FND_select_init(PinName_t *selectFND);
 void FND_display(uint8_t num);
 void FND_select(uint8_t digit);
+
+// Led toggle
+void led_toggle(PinName_t pinName);
 
 #ifdef __cplusplus
 }

@@ -27,25 +27,25 @@ void setup(void) {
 
     // LED0
     GPIO_init(LED0_PIN, OUTPUT);
-    GPIO_otype(LED0_PIN, PUSH_PULL);
+    GPIO_otype(LED0_PIN, OPEN_DRAIN);
     GPIO_pupd(LED0_PIN, PULL_UP);
     GPIO_ospeed(LED0_PIN, MID_SPEED);
 
     // LED1
     GPIO_init(LED1_PIN, OUTPUT);
-    GPIO_otype(LED1_PIN, PUSH_PULL);
+    GPIO_otype(LED1_PIN, OPEN_DRAIN);
     GPIO_pupd(LED1_PIN, PULL_UP);
     GPIO_ospeed(LED1_PIN, MID_SPEED);
 
     // LED2
     GPIO_init(LED2_PIN, OUTPUT);
-    GPIO_otype(LED2_PIN, PUSH_PULL);
+    GPIO_otype(LED2_PIN, OPEN_DRAIN);
     GPIO_pupd(LED2_PIN, PULL_UP);
     GPIO_ospeed(LED2_PIN, MID_SPEED);
 
     // LED3
     GPIO_init(LED3_PIN, OUTPUT);
-    GPIO_otype(LED3_PIN, PUSH_PULL);
+    GPIO_otype(LED3_PIN, OPEN_DRAIN);
     GPIO_pupd(LED3_PIN, PULL_UP);
     GPIO_ospeed(LED3_PIN, MID_SPEED);
 }

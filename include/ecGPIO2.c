@@ -2,7 +2,7 @@
 @ Embedded Controller by Young-Keun Kim - Handong Global University
 Author           : Daum Moon
 Created          : 05-03-2021
-Modified         : 14-09-2026
+Modified         : 23-09-2026
 Language/ver     : C++ in VS Code
 
 Description      : GPIO Library. Distributed to Students for LAB_GPIO
@@ -143,15 +143,34 @@ void FND_select_init(PinName_t *selectFND){
 	}
 }
 
-// Display a number 0 - 9 only
+// Display a number 0 - 9
 void FND_display(uint8_t num){
-	
+
+    for(int i = 0; i < 8; i++){
+        GPIO_write(_fndPins[i], numberFND[num][i]);
+    }
 }
 
 // Select display: FND0 to FND3
 void FND_select(uint8_t digit){
-	for(int i=0; i<4; i++){
-		GPIO_write(_fndSel[i], OUTPUT);
-	}
-	
+
+    // Turn OFF all FND
+    for(int i = 0; i < 4; i++){
+        GPIO_write(_fndSel[i], LOW);
+    }
+
+    // Select one FND
+    if(digit < 4){
+        GPIO_write(_fndSel[digit], HIGH);
+    }
+}
+
+
+// Led toggle
+void led_toggle(PinName_t pinName){
+    GPIO_TypeDef *port;
+    unsigned int pin;
+    ecPinmap(pinName, &port, &pin);
+
+    port->ODR ^= (1UL << pin);
 }

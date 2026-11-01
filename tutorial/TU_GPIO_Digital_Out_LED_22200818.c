@@ -2,7 +2,7 @@
 @ Embedded Controller by Young-Keun Kim - Handong Global University
 Author           : Daum Moon
 Created          : 05-03-2021
-Modified         : 00-00-2026
+Modified         : 14-09-2026
 Language/ver     : C++ in VS Code
 
 Description      : Tutorial Digital Out
